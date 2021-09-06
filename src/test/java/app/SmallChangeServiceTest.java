@@ -20,7 +20,7 @@ class SmallChangeServiceTest {
         int change = 450;
 
         // when
-        SmallChange smallChange = smallChangeService.getSmallChange(change);
+        SmallChange smallChange = smallChangeService.getSmallChangeWithRandomCoins(change);
 
         // then
         assertThat(smallChange.getTotal()).isEqualTo(change);

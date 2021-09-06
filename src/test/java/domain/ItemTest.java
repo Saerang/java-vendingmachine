@@ -22,6 +22,26 @@ public class ItemTest {
     }
 
     @Test
+    void createItem_price_less_than_hundred() {
+        // given
+        // when
+        // then
+        assertThatThrownBy(() -> Item.started("콜라,10,90"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("상품의 최소 금액은 100원 입니다.");
+    }
+
+    @Test
+    void createItem_price_not_divided_by_ten() {
+        // given
+        // when
+        // then
+        assertThatThrownBy(() -> Item.started("콜라,10,101"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("상품의 금액은 10원 단위입니다.");
+    }
+
+    @Test
     void buyItem() {
         // given
         Item item = Item.started("콜라,10,1000");
