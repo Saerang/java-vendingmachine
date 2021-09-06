@@ -23,7 +23,7 @@ public class Console {
         int change = scanner.nextInt();
         System.out.println();
 
-        SmallChange smallChange = smallChangeService.getSmallChange(change);
+        SmallChange smallChange = smallChangeService.getSmallChangeWithRandomCoins(change);
 
         System.out.println("상품명과 수량, 금액을 입력해 주세요.");
         scanner.nextLine();

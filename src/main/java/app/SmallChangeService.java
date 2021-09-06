@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 
 public class SmallChangeService {
 
-    public SmallChange getSmallChange(int change) {
+    public SmallChange getSmallChangeWithRandomCoins(int change) {
         PriorityQueue<Coin> coins = new PriorityQueue<>((o1, o2) -> o2.getPrice() - o1.getPrice());
         SmallChange smallChange = SmallChange.create(coins);
 
