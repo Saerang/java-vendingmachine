@@ -8,8 +8,8 @@ public class Main {
         Console console = new Console();
         VendingMachine vendingMachine = console.initVendingMachine();
 
-        int money = console.buyItemsFromVendingMachines(vendingMachine);
+        int money = console.buyItemsFromVendingMachine(vendingMachine);
 
-        console.returnChange(vendingMachine.getSmallChange(), money);
+        console.returnSmallChange(vendingMachine.getSmallChange(), money);
     }
 }

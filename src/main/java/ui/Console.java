@@ -36,7 +36,7 @@ public class Console {
         return new VendingMachine(smallChange, items);
     }
 
-    public int buyItemsFromVendingMachines(VendingMachine vendingMachine) {
+    public int buyItemsFromVendingMachine(VendingMachine vendingMachine) {
         System.out.println("투입 금액을 입력해 주세요.");
         Scanner scanner = new Scanner(System.in);
         int inputMoney = scanner.nextInt();
@@ -55,7 +55,7 @@ public class Console {
         return inputMoney;
     }
 
-    public void returnChange(SmallChange smallChange, int money) {
+    public void returnSmallChange(SmallChange smallChange, int money) {
         Map<Coin, Integer> returnSmallChange = smallChange.returnSmallChange(money);
 
         System.out.println("남은 금액: " + (money - this.returnTotalMoney(returnSmallChange)) + "원");
